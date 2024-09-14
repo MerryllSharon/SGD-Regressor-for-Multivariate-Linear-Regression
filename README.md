@@ -33,12 +33,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 
-
 data = fetch_california_housing()
 
-
 x= data.data[:,:3]
-
 
 y=np.column_stack((data.target,data.data[:,6]))
 
@@ -62,32 +59,32 @@ y_pred =multi_output_sgd.predict(x_test)
 
 y_pred = scaler_y.inverse_transform(y_pred)
 y_test = scaler_y.inverse_transform(y_test)
+
 print(y_pred)
-[[ 1.04860312 35.69231257]
- [ 1.49909521 35.72530255]
- [ 2.35760015 35.50646978]
- ...
- [ 4.47157887 35.06594388]
- [ 1.70991815 35.75406191]
- [ 1.79884624 35.34680017]]
+[[ 1.09542272 35.7886599 ]
+ [ 1.5319338  35.77157734]
+ [ 2.31074264 35.50215118]
+ [ 4.28276558 35.06503685]
+ [ 1.73674364 35.76683727]
+ [ 1.76282292 35.48716441]]
 
 mse = mean_squared_error(y_test,y_pred)
 
 print("Mean Squared Error:",mse)
 
-Mean Squared Error: 2.560165984862198
+Mean Squared Error: 2.5509715245097135
 
 print("\nPredictions:\n",y_pred[:5])
 Predictions:
- [[ 1.04860312 35.69231257]
- [ 1.49909521 35.72530255]
- [ 2.35760015 35.50646978]
- [ 2.73967825 35.37568192]
- [ 2.10914107 35.63894336]]
+ [[ 1.09542272 35.7886599 ]
+ [ 1.5319338  35.77157734]
+ [ 2.31074264 35.50215118]
+ [ 2.67260721 35.44067814]
+ [ 2.10236101 35.654292  ]]
 ```
 
 ## Output:
-![multivariate linear regression model for predicting the price of the house and number of occupants in the house](https://private-user-images.githubusercontent.com/124332243/366126406-1e6c626f-8096-49d4-93b8-97ca749326d3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjYzMTAzMTMsIm5iZiI6MTcyNjMxMDAxMywicGF0aCI6Ii8xMjQzMzIyNDMvMzY2MTI2NDA2LTFlNmM2MjZmLTgwOTYtNDlkNC05M2I4LTk3Y2E3NDkzMjZkMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxNFQxMDMzMzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NmM4N2JhMzNiMGFlNDZmNjQ3MjQyZWEwMzFlYWFhODU3OTc3ZGJkY2VkZWJjZTk1NGEzMzQwNjI3YTc1OThhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.VZNCOfD7pl05d0sA3EnQpTQ3QEeoYg5NFPI1uNnDKII)
+![Predictions]()
 
 
 ## Result:
