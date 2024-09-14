@@ -84,7 +84,7 @@ Predictions:
 ```
 
 ## Output:
-![Predictions](![Code_3NgxpZvVl9](https://github.com/user-attachments/assets/041e6d5c-aebb-4a1b-87ba-95cc75300c39))
+![Predictions](https://github.com/user-attachments/assets/041e6d5c-aebb-4a1b-87ba-95cc75300c39)
 
 
 ## Result:
